@@ -1,0 +1,216 @@
+:root {
+    --sidebar-width: 250px;
+    --bg-body: #f4f6f9;
+    --primary-color: #0284c7;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    padding: 22px 20px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 15px 10px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu li {
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+.sidebar-menu .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu .nav-link:hover {
+    background-color: #f0f9ff;
+    color: var(--primary-color);
+}
+
+.sidebar-menu .nav-link.active {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Main Wrapper */
+.main-wrapper {
+    margin-left: var(--sidebar-width);
+    padding: 25px 30px;
+}
+
+.top-header {
+    background: #ffffff;
+    padding: 18px 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+/* Card & Table Styling */
+.card-custom {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+
+.card-custom .card-header {
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 18px 20px;
+    font-weight: 600;
+}
+
+.table > :not(caption) > * > * {
+    padding: 14px 18px;
+    border-bottom-color: #f1f5f9;
+}
+
+.table thead th {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    background-color: #f8fafc;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+}
+
+.patient-search-form,
+.patient-search {
+    width: 100%;
+    max-width: 320px;
+}
+
+.status-select-home {
+    width: 110px;
+}
+
+.status-select-dashboard {
+    width: 100px;
+}
+
+.requested-date {
+    font-size: 0.75rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.35rem;
+}
+
+.stat-blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.stat-amber {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.stat-emerald {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.stat-rose {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 300px; /* Idagdag ito para sa tamang taas */
+    margin: auto;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .main-wrapper {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+}
